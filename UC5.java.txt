@@ -1,0 +1,35 @@
+public class UC5 {
+
+    public static void main(String[] args) {
+
+        // String to check
+        String text = "madam";
+
+        // Convert string to character array
+        char[] arr = text.toCharArray();
+
+        // Two-pointer approach
+        int start = 0;
+        int end = arr.length - 1;
+
+        boolean isPalindrome = true;
+
+        while (start < end) {
+
+            if (arr[start] != arr[end]) {
+                isPalindrome = false;
+                break;
+            }
+
+            start++;
+            end--;
+        }
+
+        // Display result
+        if (isPalindrome) {
+            System.out.println(text + " is a Palindrome");
+        } else {
+            System.out.println(text + " is NOT a Palindrome");
+        }
+    }
+}
